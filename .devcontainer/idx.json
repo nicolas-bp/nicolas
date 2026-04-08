@@ -1,0 +1,14 @@
+{
+    "name": "AV2",
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "ritwickdey.liveserver",
+        "dbaeumer.vscode-eslint"
+    ],
+    "packages": [
+        "nodejs",
+        "npm",
+        "git",
+        "yarn"
+    ]
+  }
