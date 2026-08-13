@@ -1,0 +1,46 @@
+class Cartao {
+    int numero = 0;
+    int limite = 0;
+    float saldoDisponivel = 0;
+    
+    void register(){
+        int compra1 = 1000;
+        System.out.println("compra no valor de:" + compra1);
+        saldoDisponivel = (compra1 - saldoDisponivel);
+        System.out.println("saldo disponivel:" +saldoDisponivel);
+    }
+    void verif(){
+        int compra2 = 2000;
+        System.out.println("compra no valor de:" + compra2);
+        if(compra2<saldoDisponivel){
+            saldoDisponivel = (compra2 - saldoDisponivel);
+            System.out.println("saldo disponivel:" +saldoDisponivel);
+            System.out.println("saldo disponivel, compra feita com sucesso agora voce tem:" + saldoDisponivel);
+        }
+        else {
+            System.out.println("voce n tem saldo disponivel, compra cancelada. ");
+        }
+    }
+}
+public class Main {
+     public static void main(String[] args) {
+        Cartao cartao1 = new Cartao();
+        cartao1.numero = 123575;
+        cartao1.limite = 2000;
+        cartao1.saldoDisponivel = 1000;
+        System.out.println("numero do cartao:"+ cartao1.numero + " \nlimite:" +cartao1.limite);
+        cartao1.register();
+        cartao1.verif();
+        
+        
+        
+        Cartao cartao2 = new Cartao();
+        cartao2.numero = 983485;
+        cartao2.limite = 4000;
+        cartao2.saldoDisponivel = 1000;
+         System.out.println("numero do cartao:"+ cartao2.numero + ", \nlimite:" +cartao2.limite);
+        cartao2.register();
+        cartao2.verif();
+        
+     }
+}
